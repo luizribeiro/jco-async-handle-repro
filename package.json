@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@bytecodealliance/jco": "1.35.0"
+  }
+}

@@ -1,0 +1,23 @@
+package example:repro;
+
+interface host {
+  resource thing {
+    name: func() -> string;
+  }
+  root: func() -> thing;
+  make: async func(name: string) -> thing;
+}
+
+interface api {
+  run: async func() -> string;
+}
+
+world inner {
+  import host;
+  export api;
+}
+
+world outer {
+  import api;
+  export run: async func() -> string;
+}
